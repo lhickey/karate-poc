@@ -18,8 +18,13 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile 'com.intuit.karate:karate-junit4:' + karateVersion
     testCompile 'com.intuit.karate:karate-apache:' + karateVersion
     testCompile 'net.masterthought:cucumber-reporting:' + masterThought
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = gradleVersionProperty
+}
+
+
